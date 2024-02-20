@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="/src/components/contact/contact.css">
+</head>
+
+<body>
+    <main class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="/public/images/Logo.png" alt="Logo">
+
+            </div>
+            <ul>
+                <li><a href="/src/index.html">Home</a></li>
+                <li><a href="/src/components/about/aboutus.htm">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="/src/components/contact/contact.htm">Contact</a></li>
+            </ul>
+            <div>
+                <button>
+                    SignUp
+                </button>
+            </div>
+        </nav>
+
+
+        <!-- responsive sidebar code from here--------->
+
+        <div class="responsive-Img">
+            <img src="/public/images/Logo.png" height="15px" width="100px" alt="Logo">
+        </div>
+
+        <div class="sidebar">
+            <ul id="respUl">
+                <li><a href="/src/index.html">Home</a></li>
+                <li><a href="/src/components/about/aboutus.htm">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="/src/components/contact/contact.htm">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="sidebar-btn">
+            <button id='toggleButton' onclick="openSideBar()">☰</button>
+        </div>
+
+
+        <div class="contact-head">
+            <h2>Contact us</h2>
+        </div>
+        <div class="contact">
+
+            <form onsubmit="contact()" class="contact-form">
+                <label for="name">Name</label>
+                <input type="text" required />
+                <label for="email">Email</label>
+                <input type="email" required />
+                <label for="name">subject</label>
+                <input type="text" required />
+                <label for="message">Your message</label>
+                <textarea name="Your message" cols="60" rows="5" required></textarea>
+                <button>send</button>
+            </form>
+
+            <div class="contact-img">
+                <img id="contact-img" src="/public/images/contact.svg" height="450px" width="500px" alt="contact image">
+            </div>
+
+
+        </div>
+
+    </main>
+    <script src="/src/index.js"></script>
+</body>
+
+</html>
