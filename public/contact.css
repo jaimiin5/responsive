@@ -71,7 +71,7 @@ button {
     all: unset;
     height: 30px;
     width: fit-content;
-    background: var(--red);
+    background: #2db436;
     color: #FFFFFF;
     padding: 6px 16px;
 }
@@ -219,11 +219,14 @@ textarea {
         display: none;
 
     }
+    .contact-head{
+        padding-left: 30px;
+
+    }
     .contact-form{
         display: flex;
         flex-direction: column;
-        width: 120 px;
-
+        width: 310px;
     }
     label {
         /* position:absolute; */
