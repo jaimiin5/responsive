@@ -28,9 +28,9 @@
                 </button>
             </div>
         </nav>
-         <!-- responsive sidebar code from here--------->
+        <!-- responsive sidebar code from here--------->
 
-         <div class="responsive-Img">
+        <div class="responsive-Img">
             <img src="Logo.png" height="15px" width="100px" alt="Logo">
         </div>
 
@@ -47,15 +47,70 @@
             <button id='toggleButton' onclick="openSideBar()">☰</button>
         </div>
 
-        
+
         <div class="services">
-        <h2>Services</h2>
-            <p>If you're just getting started or searching for a change, you've come to the correct spot. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat optio et adipisci maxime? Aut et repudiandae doloremque reprehenderit non! Ut mollitia possimus ipsa blanditiis a doloremque architecto est ratione unde? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum iste aut cumque officia iusto eaque, ipsam deserunt. Recusandae cupiditate, libero placeat eius atque voluptatibus enim ea quibusdam, magnam, necessitatibus officia. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati suscipit magnam blanditiis velit odit quasi culpa neque praesentium cumque earum reprehenderit minima quis eius quos sapiente incidunt, consectetur quisquam enim.</p>
+            <h2>Services</h2>
+            <p>If you're just getting started or searching for a change, you've come to the correct spot. Lorem ipsum
+                dolor sit amet consectetur, adipisicing elit. Fugiat optio et adipisci maxime? Aut et repudiandae
+                doloremque reprehenderit non! Ut mollitia possimus ipsa blanditiis a doloremque architecto est ratione
+                unde? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum iste aut cumque officia iusto eaque,
+                ipsam deserunt. Recusandae cupiditate, libero placeat eius atque voluptatibus enim ea quibusdam, magnam,
+                necessitatibus officia. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati suscipit
+                magnam blanditiis velit odit quasi culpa neque praesentium cumque earum reprehenderit minima quis eius
+                quos sapiente incidunt, consectetur quisquam enim.</p>
         </div>
-            
+
 
     </main>
-    <script src="/index.js"></script>
+    <script>
+        // responsive sidebar script
+        let openSideBar = () => {
+            let body = document.querySelector('body');
+            body.classList.toggle('no-scroll');
+
+            let sidebar = document.querySelector('.sidebar');
+            if (sidebar.style.display === 'none' || sidebar.style.display === '') {
+                sidebar.style.display = 'flex';
+
+            }
+            else if (sidebar.style.display === 'flex') {
+                sidebar.style.display = 'none';
+            }
+            else {
+                sidebar.style.display = 'none';
+            }
+
+        }
+
+
+        // transition script
+        const img1 = document.querySelector('#f2-img1');
+        const img2 = document.querySelector('#f2-img2');
+        const content1 = document.querySelector('#f2-content1');
+        const content2 = document.querySelector('#f2-content2');
+
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                } else {
+                    entry.target.classList.remove('active');
+                }
+            });
+        }, options);
+
+        observer.observe(img1);
+        observer.observe(img2);
+        observer.observe(content1);
+        observer.observe(content2);
+
+    </script>
 </body>
 
 </html>
