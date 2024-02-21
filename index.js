@@ -1,22 +1,10 @@
-// responsive sidebar script
-let openSideBar = () => {
+let openSideBar=()=>{
+    let sidebar = document.querySelector('.sidebar');
+    sidebar.classList.toggle('open');
+
     let body = document.querySelector('body');
     body.classList.toggle('no-scroll');
-
-    let sidebar = document.querySelector('.sidebar');
-    if (sidebar.style.display === 'none' || sidebar.style.display === '') {
-        sidebar.style.display = 'flex';
-
-    }
-    else if (sidebar.style.display === 'flex') {
-        sidebar.style.display = 'none';
-    }
-    else {
-        sidebar.style.display = 'none';
-    }
-
 }
-
 
 // transition script
 const img1 = document.querySelector('#f2-img1');

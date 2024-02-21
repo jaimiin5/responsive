@@ -6,8 +6,6 @@
     margin: 0;
     padding: 0;
 }
-
-
 p {
     font-weight: 700;
 }
@@ -19,6 +17,9 @@ h4 {
 :root {
     --red: #2db436;
     --white: #FFFFFF;
+}
+#underline{
+    text-decoration: underline;
 }
 
 .container {
@@ -69,9 +70,7 @@ button {
 }
 
 /* responsiveness-----------------> */
-.parentSidebar{
-    position: fixed;
-}
+
 .sidebar {
     display: none;
 }
@@ -433,23 +432,29 @@ footer {
     }
 
     .sidebar {
-        display: none;
+        display: flex;
         flex-direction: column;
         align-items: flex-start;
         padding: 20px;
 
         background-color: #ffffff;
 
-        width: 50%;
+        width: 240px;
         height: 100vh;
 
         position: fixed;
         top: 55px;
         left: 0px;
 
-        transition: 1s ease-out;
+        transform: translateX(-400px);
+        transition: 0.5s ease;
+
+    }
+    .sidebar.open{
+        transform: translateX(0);
     }
     .no-scroll{
+        /* this will disable scroll behaviour */
         overflow: hidden;
     }
 
@@ -526,7 +531,7 @@ footer {
         background-color: #292e4e;
         width: 90%;
         border-radius: 25px;
-        padding: 10px auto;
+        padding:10px;
         color: white;
         font-weight: normal;
     }
@@ -555,6 +560,9 @@ footer {
         flex-direction: column;
         height: fit-content;
         gap: 0px;
+    }
+    .footer-1{
+        padding: 30px;
     }
     .footer-2{
         flex-direction: column;
