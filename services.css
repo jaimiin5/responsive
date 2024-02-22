@@ -1,14 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,100;1,200&display=swap');
 
 * {
-    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-    font-family: 'Poppins', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     margin: 0;
     padding: 0;
 }
-
 p {
-    font-weight: 700;
+    font-weight: normal;
 }
 
 h4 {
@@ -16,10 +15,9 @@ h4 {
 }
 
 :root {
-    --red: #0783ff;
+    --red: #2db436;
     --white: #FFFFFF;
 }
-
 nav {
     display: flex;
     justify-content: space-between;
@@ -27,27 +25,14 @@ nav {
     max-width: 1280px;
     height: 72px;
     margin: auto;
-    font-weight: 900;
+    font-weight: normal;
 
     position: sticky;
 }
-
 .container {
     margin: 0 auto;
     height: 700px;
     width: 1280 px;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1280px;
-    height: 72px;
-    margin: auto;
-    font-weight: 900;
-
-    position: sticky;
 }
 
 .navLinks ul li {
@@ -56,7 +41,7 @@ nav {
 
 nav ul {
     display: flex;
-    gap: 50px;
+    gap: 50px;  
     list-style: none;
 
 }
@@ -70,11 +55,11 @@ nav li a {
 button {
     all: unset;
     height: 30px;
-    width: fit-content;
-    background: #2db436;
+    background: var(--red);
     color: #FFFFFF;
     padding: 6px 16px;
 }
+
 
 /* responsiveness-----------------> */
 .sidebar {
@@ -90,52 +75,19 @@ button {
 }
 
 
-.contact-head {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 50px auto 0px auto;
-    max-width: 900px;
-}
 
-.contact {
-    margin: 0px auto;
+.services{
+    margin: 40px auto;
     max-width: 1200px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 20px 20px;
-    background-color: white;
-}
-
-.contact-form {
+    min-height: 500px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 1280 px;
-}
-
-label {
-    /* position: relative; */
-    /* top: 23px; */
-    /* left: 10px; */
-    background-color: white;
-    width: fit-content;
-}
-
-input {
-    width: fit-content;
-    height: 30px;
-    border-radius: 3px;
-    padding: 7px 35px 7px 7px;
-    /* border-color: rgb(242, 242, 242); */
-    border-width: 0.5px;
-}
-
-textarea {
-    border-radius: 3px;
-    padding: 10px 10px;
+    justify-content:flex-start;
+    align-items:flex-start;
+    gap: 20px;
+    padding: 20px 20px  ;
+    background-color: rgb(246, 246, 246);
+    
 }
 
 
@@ -143,15 +95,39 @@ textarea {
 
 
 
-@media screen and (width <=385px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (width <=435px) {
     * {
         font-size: 12px;
     }
-
-    a {
-        font-weight: bold;
+    a{
+        font-weight: normal;
     }
- 
+
     h2 {
         font-size: 20px;
     }
@@ -206,6 +182,73 @@ textarea {
         /* this will disable scroll behaviour */
         overflow: hidden;
     }
+    
+    #respUl {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 40px;
+        list-style: none;
+    }
+
+    .sidebar li a {
+        text-decoration: none;
+        color: black;
+    }
+}
+
+@media screen and (min-width: 436px) and (max-width: 780px) {
+
+
+    nav {
+        display: none;
+    }
+
+    .sidebar-btn {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    .responsive-Img {
+        display: flex;
+        margin: 20px 10px;
+    }
+
+    .responsive-nav img {
+        height: 20px;
+        width: 130px;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+
+        background-color: #ffffff;
+
+        width: 240px;
+        height: 100vh;
+
+        position: fixed;
+        top: 55px;
+        left: 0px;
+
+        transform: translateX(-400px);
+        transition: 0.5s ease;
+
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .no-scroll {
+        /* this will disable scroll behaviour */
+        overflow: hidden;
+    }
 
     #respUl {
         display: flex;
@@ -219,42 +262,4 @@ textarea {
         text-decoration: none;
         color: black;
     }
-
-    #contact-img {
-        height: 200px;
-        width: 200px;
-        display: none;
-
-    }
-    .contact-head{
-        padding-left: 30px;
-
-    }
-    .contact-form{
-        display: flex;
-        flex-direction: column;
-        width: 310px;
-    }
-    label {
-        /* position:absolute; */
-        top: 23px;
-        left: 10px;
-        background-color: white;
-        width: fit-content;
-    }
-    input {
-        width: 125px;
-        height: 10px;
-        border-radius: 3px;
-        padding: 7px 35px 7px 7px;
-        /* border-color: rgb(242, 242, 242); */
-        border-width: 0.5px;
-    }
-
-    textarea {
-        border-radius: 3px;
-        padding: 10px 10px;
-    }
-
-
 }

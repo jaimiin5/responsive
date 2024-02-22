@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;1,100;1,200&display=swap');
 
 * {
-    /* font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
-    font-family: 'Poppins', sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-weight: normal;
     margin: 0;
     padding: 0;
 }
+
 p {
-    font-weight: 700;
+    font-weight: normal;
+}
+
+h2 {
+    font-weight: 700px;
 }
 
 h4 {
@@ -18,14 +24,15 @@ h4 {
     --red: #2db436;
     --white: #FFFFFF;
 }
-#underline{
+
+#underline {
     text-decoration: underline;
 }
 
 .container {
     margin: 0 auto;
     height: 700px;
-    width: 1280 px;
+    /* width: 1280px; */
 }
 
 
@@ -84,10 +91,10 @@ button {
 }
 
 /* main content from here----------> */
-
 .hero {
     width: 100%;
-    height: 100%;
+    height: 90%;
+    margin: 90px auto;
 
     display: flex;
     justify-content: center;
@@ -261,7 +268,7 @@ section {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:50px;
+    gap: 50px;
     margin: 100px auto;
     background-color: rgb(225, 225, 225);
     padding: 20px 0px;
@@ -386,17 +393,19 @@ footer {
 
 
 
-@media screen and (width <=385px) {
+@media screen and (width <=435px) {
     * {
         font-size: 12px;
     }
 
     a {
-        font-weight: bold;
+        font-weight: normal;
     }
-    h1{
+
+    h1 {
         font-size: 25px;
     }
+
     h2 {
         font-size: 15px;
         font-weight: normal;
@@ -450,10 +459,12 @@ footer {
         transition: 0.5s ease;
 
     }
-    .sidebar.open{
+
+    .sidebar.open {
         transform: translateX(0);
     }
-    .no-scroll{
+
+    .no-scroll {
         /* this will disable scroll behaviour */
         overflow: hidden;
     }
@@ -470,12 +481,16 @@ footer {
         text-decoration: none;
         color: black;
     }
+
     .hero {
-        height: 400px;
-        width: 360px;
-        margin: 30px 9px;
+        height: fit-content;
+        width: fit-content;
+        margin: 25px 30px;
         display: flex;
         flex-direction: column;
+        align-items: center;
+
+        padding: 20px 20px;
         gap: 25px;
         background-color: #292e4e;
         color: white;
@@ -526,45 +541,54 @@ footer {
         transition: ease-out 0.5s;
 
     }
-    .frame-2{
+
+    .frame-2 {
         flex-direction: column;
         background-color: #292e4e;
         width: 90%;
         border-radius: 25px;
-        padding:10px;
+        padding: 10px;
         color: white;
         font-weight: normal;
     }
-    #frame2-img1{
+
+    #frame2-img1 {
         height: 310px;
         width: 300px;
-        
-    }
-    #frame2-img2{
-        height: 310px;
-        width: 300px;
-        
-    }
-    #f2-content1{
-        width: 270px;
-    }
-    #f2-content2{
-        width: 270px;
-    }
-    .numbering{
-        flex-direction: column;
-        padding: 30px;
+
     }
 
-    footer{
+    #frame2-img2 {
+        height: 310px;
+        width: 300px;
+
+    }
+
+    #f2-content1 {
+        width: 270px;
+    }
+
+    #f2-content2 {
+        width: 270px;
+    }
+
+    .numbering {
+        flex-direction: column;
+        padding: 30px;
+        gap: 20px;
+    }
+
+    footer {
         flex-direction: column;
         height: fit-content;
         gap: 0px;
     }
-    .footer-1{
+
+    .footer-1 {
         padding: 30px;
     }
-    .footer-2{
+
+    .footer-2 {
         flex-direction: column;
     }
 
@@ -577,9 +601,117 @@ footer {
 
 
 
-/* future changes  */
-    .frame-3{
+    /* future changes  */
+    .frame-3 {
         display: none;
     }
 
+}
+
+@media screen and (min-width: 436px) and (max-width: 780px) {
+
+
+    nav {
+        display: none;
+    }
+
+    .sidebar-btn {
+        display: flex;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    .responsive-Img {
+        display: flex;
+        margin: 20px 10px;
+    }
+
+    .responsive-nav img {
+        height: 20px;
+        width: 130px;
+    }
+
+    .sidebar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+
+        background-color: #ffffff;
+
+        width: 240px;
+        height: 100vh;
+
+        position: fixed;
+        top: 55px;
+        left: 0px;
+
+        transform: translateX(-400px);
+        transition: 0.5s ease;
+
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .no-scroll {
+        /* this will disable scroll behaviour */
+        overflow: hidden;
+    }
+
+    #respUl {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 40px;
+        list-style: none;
+    }
+
+    .sidebar li a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .hero {
+        width: 700px;
+        border-radius: 20px;
+        margin: 25px 30px;
+        padding: 20px 20px;
+        gap: 25px;
+        background-color: #292e4e;
+        color: white; 
+
+    }
+    .frame-1{
+        gap: 25px;
+    }
+    section{
+        padding:35px 35px;
+    }
+    .frame-2{
+        width: 720px ;
+    }
+    .numbering{
+        width: 720px;
+        padding: 10px 10px;
+    }
+    .frame-3{
+        width: 720px;
+    }
+    .frame3-head{
+        width: 600px;
+    }
+    .frame3-below{
+        flex-direction: column;
+        gap: 150px;
+    }
+    footer{
+        width: 100vw;
+        gap: 10px;
+    }
+    #footer-email{
+        width: 150px;
+    }
 }
