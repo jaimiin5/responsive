@@ -483,9 +483,9 @@ footer {
     }
 
     .hero {
-        height: fit-content;
-        width: fit-content;
-        margin: 25px 30px;
+        height: 380px;
+        width: 315px;
+        margin: 20px 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -494,7 +494,7 @@ footer {
         gap: 25px;
         background-color: #292e4e;
         color: white;
-        border-radius: 10px;
+        border-radius: 15px;
 
     }
 
